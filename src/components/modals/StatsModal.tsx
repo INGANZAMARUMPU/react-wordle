@@ -59,11 +59,11 @@ export const StatsModal = ({
   const getRankingStats = useCallback(async () => {
     if (!gameScore || !country) return
 
-    const res = await axios.get(RANKINGS_ENDPOINT, {
+    const result = await axios.get(RANKINGS_ENDPOINT, {
       params: { score: gameScore, country, solution },
     })
 
-    const data = await res.data
+    const data = await result.data
     setRankingStats(data as RankingStats)
   }, [gameScore, country])
 
@@ -99,17 +99,20 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
-      {isGameWon && gameScore && (
-        <>
-          <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
-            Ihiganwa mpuzamakungu
-          </h4>
-          <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
-            Amanota yawe y'ino munsi: {gameScore}
-          </p>
-          {<RankingBar rankingStats={rankingStats} />}
-        </>
-      )}
+      {isGameWon &&
+        gameScore &&
+        parseInt(gameScore) > 0 &&
+        parseInt(gameScore) < 100 && (
+          <>
+            <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+              Ihiganwa mpuzamakungu
+            </h4>
+            <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
+              Amanota yawe y'uno munsi: {gameScore}
+            </p>
+            {<RankingBar rankingStats={rankingStats} />}
+          </>
+        )}
       {isGameLost && (
         <p className="text-sm mt-4 leading-6 font-medium text-gray-900 dark:text-gray-100">
           {CORRECT_WORD_MESSAGE(solution)}

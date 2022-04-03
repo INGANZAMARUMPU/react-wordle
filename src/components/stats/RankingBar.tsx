@@ -24,18 +24,18 @@ export const RankingBar = ({
   return (
     <div className="flex justify-center my-2">
       <StatItem
-        label={`Ikibanza (${country})`}
+        label={`Ikibanza cawe mu gihugu: ${country}`}
         value={national_rank}
+        valueTextSize="text-s"
+      />
+      <StatItem
+        label={"Ikibanza cawe kw'isi yose"}
+        value={`${international_rank}`}
         valueTextSize="text-s"
       />
       <StatItem
         label={`Amanota moyen y'igihugu (${country})`}
         value={average_national_score}
-        valueTextSize="text-s"
-      />
-      <StatItem
-        label={"Ikibanza kw'isi yose"}
-        value={`${international_rank}`}
         valueTextSize="text-s"
       />
       <StatItem
