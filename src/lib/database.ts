@@ -26,8 +26,8 @@ export const saveGameStateToDatabase = (won: boolean) => {
   const startTime = new Date(localStorage.getItem('startTime') as string)
   const endTime = new Date()
   const guesses = (game && game.guesses) || []
-  const timeTaken = (endTime.getTime() - startTime.getTime()) / 1000
-  const score = Math.round(100 - (guesses.length * timeTaken) / 100)
+  const timeTaken = Math.floor((endTime.getTime() - startTime.getTime()) / 1000)
+  const score = won ? guesses.length * timeTaken : 0
   localStorage.setItem('gameScore', score.toString())
 
   const completedGame = {
