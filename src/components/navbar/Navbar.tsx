@@ -22,9 +22,6 @@ export const Navbar = ({
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
-        {/* <p className="text-3xl ml-2.5 font-bold dark:text-white">
-          {GAME_TITLE}
-        </p> */}
         <div>
           <img src="/ijambo.png" alt="Ijambo" className="h-16" />
         </div>

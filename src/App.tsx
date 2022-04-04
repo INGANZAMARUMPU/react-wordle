@@ -4,6 +4,7 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/outline'
 import {
   CORRECT_WORD_MESSAGE,
   GAME_COPIED_MESSAGE,
@@ -283,10 +284,21 @@ function App() {
             currentRowClassName={currentRowClass}
           />
         </div>
+        <div className="flex justify-center pb-1">
+          <div>
+            <p className="text-m font-medium text-gray-600 dark:text-gray-100">
+              Umwami w'umuriro umusaba akiri umwana,yamara gukura akakwigiza
+              haruguru
+            </p>
+          </div>
+        </div>
         <div className="flex justify-center pb-6">
-          <span className="text-m font-medium text-gray-600 dark:text-gray-100">
-            Igito gitabwa <span className="font-bold">iwabo</span>
-          </span>
+          <span className="text-s px-4">Ndazi ico uyo mugani usigura ? </span>
+          <CheckCircleIcon
+            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+            onClick={() => setIsInfoModalOpen(true)}
+          />
+          <XCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
         </div>
         <Keyboard
           onChar={onChar}
