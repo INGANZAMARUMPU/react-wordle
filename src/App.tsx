@@ -283,6 +283,11 @@ function App() {
             currentRowClassName={currentRowClass}
           />
         </div>
+        <div className="flex justify-center pb-6">
+          <span className="text-m font-medium text-gray-600 dark:text-gray-100">
+            Igito gitabwa <span className="font-bold">iwabo</span>
+          </span>
+        </div>
         <Keyboard
           onChar={onChar}
           onDelete={onDelete}
