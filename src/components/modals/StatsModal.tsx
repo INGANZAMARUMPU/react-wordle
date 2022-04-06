@@ -101,20 +101,17 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
-      {isGameWon &&
-        gameScore &&
-        parseInt(gameScore) > 0 &&
-        parseInt(gameScore) < 100 && (
-          <>
-            <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
-              {INTERNATIONAL_COMPETITION_TEXT}
-            </h4>
-            <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
-              {YOUR_SCORE_TEXT}: {gameScore}
-            </p>
-            {<RankingBar rankingStats={rankingStats} />}
-          </>
-        )}
+      {isGameWon && gameScore && parseInt(gameScore) > 0 && (
+        <>
+          <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+            {INTERNATIONAL_COMPETITION_TEXT}
+          </h4>
+          <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
+            {YOUR_SCORE_TEXT}: {gameScore}
+          </p>
+          {<RankingBar rankingStats={rankingStats} />}
+        </>
+      )}
       {isGameLost && (
         <p className="text-sm mt-4 leading-6 font-medium text-gray-900 dark:text-gray-100">
           {CORRECT_WORD_MESSAGE(solution)}
