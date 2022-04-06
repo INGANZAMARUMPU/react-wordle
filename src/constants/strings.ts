@@ -6,6 +6,7 @@ export const WIN_MESSAGES = [
   'Neza cane 👍🏾 !',
   'Uri incambwenge 👍🏾 !',
   'Urarigemye 👍🏾 !',
+  "Ukwiye umudari w'inzahabu 👍🏾 !",
 ]
 export const GAME_COPIED_MESSAGE = 'Urukino rwakoporowe'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Indome ntizikwiye'
@@ -30,3 +31,11 @@ export const BEST_STREAK_TEXT = 'Iminsi myinshi watsinze wikurikiranya'
 export const HARD_MODE_DESCRIPTION =
   'Indome zose weretswe zitegerezwa gukoreshwa mu majambo akurikira'
 export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Kugira bisomeke neza uri ku zuba'
+export const INTERNATIONAL_COMPETITION_TEXT = 'Ihiganwa mpuzamakungu'
+export const YOUR_SCORE_TEXT = "Amanota yawe y'uno munsi"
+export const YOUR_POSITION_IN_COUNTRY_TEXT = 'Ikibanza cawe mu gihugu'
+export const YOUR_POSITION_WORLDWIDE_TEXT = "Ikibanza cawe kw'isi yose"
+export const MEDIAN_SCORE_PER_COUNTRY_TEXT = "Incahagati y'amanota ku gihugu"
+export const MEDIAN_SCORE_WORLDWIDE_TEXT = "Incahagati y'amanota kw'isi yose"
+export const SCORE_DESCRIPTION_TEXT =
+  '(amajambo wagerageje X imisegonda vyagufashe) + (100 X amajambo atarimwo wagerageje)'
