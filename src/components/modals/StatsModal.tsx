@@ -51,8 +51,8 @@ export const StatsModal = ({
   const [rankingStats, setRankingStats] = useState<RankingStats>({
     national_rank: '/',
     international_rank: '/',
-    average_national_score: 0,
-    average_international_score: 0,
+    median_national_score: 0,
+    median_international_score: 0,
     country: country || '',
   })
 
