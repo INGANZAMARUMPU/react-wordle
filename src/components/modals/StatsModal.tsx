@@ -14,6 +14,8 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
   CORRECT_WORD_MESSAGE,
+  INTERNATIONAL_COMPETITION_TEXT,
+  YOUR_SCORE_TEXT,
 } from '../../constants/strings'
 
 import { RANKINGS_ENDPOINT } from '../../constants/endpoints'
@@ -105,10 +107,10 @@ export const StatsModal = ({
         parseInt(gameScore) < 100 && (
           <>
             <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
-              Ihiganwa mpuzamakungu
+              {INTERNATIONAL_COMPETITION_TEXT}
             </h4>
             <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
-              Amanota yawe y'uno munsi: {gameScore}
+              {YOUR_SCORE_TEXT}: {gameScore}
             </p>
             {<RankingBar rankingStats={rankingStats} />}
           </>

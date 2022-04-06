@@ -1,4 +1,10 @@
 import { StatItem } from './StatItem'
+import {
+  YOUR_POSITION_IN_COUNTRY_TEXT,
+  YOUR_POSITION_WORLDWIDE_TEXT,
+  MEDIAN_SCORE_WORLDWIDE_TEXT,
+  MEDIAN_SCORE_PER_COUNTRY_TEXT,
+} from '../../constants/strings'
 
 type Props = {
   rankingStats: RankingStats
@@ -24,22 +30,22 @@ export const RankingBar = ({
   return (
     <div className="flex justify-center my-2">
       <StatItem
-        label={`Ikibanza cawe mu gihugu: ${country}`}
+        label={`${YOUR_POSITION_IN_COUNTRY_TEXT} (${country})`}
         value={national_rank}
         valueTextSize="text-s"
       />
       <StatItem
-        label={"Ikibanza cawe kw'isi yose"}
+        label={YOUR_POSITION_WORLDWIDE_TEXT}
         value={`${international_rank}`}
         valueTextSize="text-s"
       />
       <StatItem
-        label={`Amanota moyen y'igihugu (${country})`}
+        label={`${MEDIAN_SCORE_PER_COUNTRY_TEXT} (${country})`}
         value={median_national_score}
         valueTextSize="text-s"
       />
       <StatItem
-        label={"Amanota moyen kw'isi yose"}
+        label={MEDIAN_SCORE_WORLDWIDE_TEXT}
         value={median_international_score}
         valueTextSize="text-s"
       />
