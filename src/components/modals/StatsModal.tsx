@@ -121,6 +121,12 @@ export const StatsModal = ({
         </p>
       )}
       {(isGameLost || isGameWon) && (
+        <p className="text-xs">
+          {solution === 'IDUBU' &&
+            "idubu ni igikoko co mw'ishamba. Mu gifaransa bacita 'ours', mu congereza 'bear'"}
+        </p>
+      )}
+      {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
             <h5>{NEW_WORD_TEXT}</h5>
