@@ -29,7 +29,7 @@ export const saveGameStateToDatabase = (won: boolean) => {
   const timeTaken = Math.floor((endTime.getTime() - startTime.getTime()) / 1000)
   const penalty = getStoredPenalty()
   const normalScore = guesses.length * timeTaken - 100 * penalty
-  const score = won ? normalScore : 0
+  const score = won && normalScore > 0 ? normalScore : 0
   localStorage.removeItem('penalty')
   localStorage.setItem('gameScore', score.toString())
 
