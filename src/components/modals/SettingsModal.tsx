@@ -52,7 +52,7 @@ export const SettingsModal = ({
           <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">
             2022{' '}
             <Link
-              href="https://www.instagram.com/ndakunda.ikirundi/"
+              href="https://linktr.ee/ndakundaikirundi"
               text="Ndakunda Ikirundi"
             />
           </p>
