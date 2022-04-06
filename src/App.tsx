@@ -4,7 +4,8 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
-import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/outline'
+import { Link } from './components/modals/Link'
+
 import {
   CORRECT_WORD_MESSAGE,
   GAME_COPIED_MESSAGE,
@@ -294,12 +295,11 @@ function App() {
           </div>
         </div>
         <div className="flex justify-center pb-6">
-          <span className="text-s px-4">Ndazi ico uyo mugani usigura ? </span>
-          <CheckCircleIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-            onClick={() => setIsInfoModalOpen(true)}
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSePuQ_fFts7tPy5D2fvAD6QE8PnlGEc1KFbBsxBDtEiVCvJOA/viewform?usp=pp_url&entry.772919116=%22Umugabo+apfa+rimwe+ntapfa+kabiri%22%0A%0AAndika+insiguro+y'uwo+mugani+munsi+:%0A%0A....%0A"
+            className="underline font-bold text-gray-600 dark:text-gray-100 text-xs pt-4"
+            text=" Ndazi insiguro y'uwo mugani !"
           />
-          <XCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
         </div>
         <Keyboard
           onChar={onChar}
