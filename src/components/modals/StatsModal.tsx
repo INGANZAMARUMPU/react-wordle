@@ -9,12 +9,13 @@ import { shareStatus } from '../../lib/share'
 import { solution, tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
-  STATISTICS_TITLE,
-  GUESS_DISTRIBUTION_TEXT,
-  NEW_WORD_TEXT,
-  SHARE_TEXT,
   CORRECT_WORD_MESSAGE,
+  GUESS_DISTRIBUTION_TEXT,
   INTERNATIONAL_COMPETITION_TEXT,
+  NEW_WORD_TEXT,
+  SCORE_DESCRIPTION_TEXT,
+  SHARE_TEXT,
+  STATISTICS_TITLE,
   YOUR_SCORE_TEXT,
 } from '../../constants/strings'
 
@@ -101,7 +102,7 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
-      {isGameWon && gameScore && parseInt(gameScore) > 0 && (
+      {isGameWon && gameScore && (
         <>
           <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
@@ -109,9 +110,7 @@ export const StatsModal = ({
           <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
-          <span className="text-xs">
-            (incuro wagerageje X imisegonda vyagufashe)
-          </span>
+          <span className="text-xs">{SCORE_DESCRIPTION_TEXT}</span>
           {<RankingBar rankingStats={rankingStats} />}
         </>
       )}

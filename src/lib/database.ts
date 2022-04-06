@@ -5,7 +5,7 @@ import {
   GAMES_ENDPOINT,
   MISSING_WORDS_ENDPOINT,
 } from '../constants/endpoints'
-import { loadGameStateFromLocalStorage } from './localStorage'
+import { getStoredPenalty, loadGameStateFromLocalStorage } from './localStorage'
 
 type CompletedGamePayload = {
   country: string
@@ -27,7 +27,10 @@ export const saveGameStateToDatabase = (won: boolean) => {
   const endTime = new Date()
   const guesses = (game && game.guesses) || []
   const timeTaken = Math.floor((endTime.getTime() - startTime.getTime()) / 1000)
-  const score = won ? guesses.length * timeTaken : 0
+  const penalty = getStoredPenalty()
+  const normalScore = guesses.length * timeTaken - 100 * penalty
+  const score = won ? normalScore : 0
+  localStorage.removeItem('penalty')
   localStorage.setItem('gameScore', score.toString())
 
   const completedGame = {
@@ -51,6 +54,9 @@ export const saveGameStateToDatabase = (won: boolean) => {
 }
 
 export const saveCurrentGuessToDatabase = (currentGuess: string) => {
+  const penalty = getStoredPenalty() + 1
+
+  localStorage.setItem('penalty', penalty.toString())
   axios.post(MISSING_WORDS_ENDPOINT, {
     word: { value: currentGuess.toLowerCase() },
   })
