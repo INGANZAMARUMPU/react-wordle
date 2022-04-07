@@ -68,7 +68,7 @@ export const StatsModal = ({
 
     const data = await result.data
     setRankingStats(data as RankingStats)
-  }, [gameScore, country])
+  }, [gameScore, country, isGameLost])
 
   useEffect(() => {
     if (!isOpen) return
