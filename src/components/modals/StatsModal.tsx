@@ -60,7 +60,7 @@ export const StatsModal = ({
   })
 
   const getRankingStats = useCallback(async () => {
-    if (!gameScore || !country) return
+    if (!gameScore || !country || isGameLost) return
 
     const result = await axios.get(RANKINGS_ENDPOINT, {
       params: { score: gameScore, country, solution },
