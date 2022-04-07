@@ -102,7 +102,7 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
-      {isGameWon && gameScore && parseInt(gameScore) > 0 && (
+      {isGameWon && gameScore && (
         <>
           <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
