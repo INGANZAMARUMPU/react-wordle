@@ -38,4 +38,4 @@ export const YOUR_POSITION_WORLDWIDE_TEXT = "Ikibanza cawe kw'isi yose"
 export const MEDIAN_SCORE_PER_COUNTRY_TEXT = "Incahagati y'amanota ku gihugu"
 export const MEDIAN_SCORE_WORLDWIDE_TEXT = "Incahagati y'amanota kw'isi yose"
 export const SCORE_DESCRIPTION_TEXT =
-  '(amajambo wagerageje X imisegonda vyagufashe) + (100 X amajambo atarimwo wagerageje)'
+  '🤯 (incuro umaze gukina * incuro wabitoye) - (amajambo wagerageje * imisegonda vyagufashe) - (100 * amajambo atarimwo wagerageje) 🤯'
