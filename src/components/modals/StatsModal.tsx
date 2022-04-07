@@ -107,10 +107,12 @@ export const StatsModal = ({
           <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
           </h4>
-          <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
+          <p className="text-m font-bold leading-5 text-gray-900 dark:text-gray-100">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
-          <span className="text-xs">{SCORE_DESCRIPTION_TEXT}</span>
+          <span className="text-xs text-gray-900 dark:text-gray-100">
+            {SCORE_DESCRIPTION_TEXT}
+          </span>
           {<RankingBar rankingStats={rankingStats} />}
         </>
       )}
