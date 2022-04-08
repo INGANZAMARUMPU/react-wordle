@@ -9,11 +9,9 @@ import { shareStatus } from '../../lib/share'
 import { solution, tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
-  CORRECT_WORD_MESSAGE,
   GUESS_DISTRIBUTION_TEXT,
   INTERNATIONAL_COMPETITION_TEXT,
   NEW_WORD_TEXT,
-  SCORE_DESCRIPTION_TEXT,
   SHARE_TEXT,
   STATISTICS_TITLE,
   YOUR_SCORE_TEXT,
@@ -104,22 +102,14 @@ export const StatsModal = ({
       />
       {gameScore && (
         <>
-          <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
-            {INTERNATIONAL_COMPETITION_TEXT}
-          </h4>
-          <p className="text-m font-bold leading-5 text-gray-900 dark:text-gray-100">
+          <p className="text-lg font-bold leading-5 text-gray-900 dark:text-gray-100">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
-          <span className="text-xs text-gray-900 dark:text-gray-100">
-            {SCORE_DESCRIPTION_TEXT}
-          </span>
+          <p className="text-m mt-2 leading-6 font-medium text-gray-900 dark:text-gray-100">
+            {INTERNATIONAL_COMPETITION_TEXT}
+          </p>
           {<RankingBar rankingStats={rankingStats} />}
         </>
-      )}
-      {isGameLost && (
-        <p className="text-sm mt-4 leading-6 font-medium text-gray-900 dark:text-gray-100">
-          {CORRECT_WORD_MESSAGE(solution)}
-        </p>
       )}
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
