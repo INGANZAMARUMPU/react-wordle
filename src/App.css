@@ -1,3 +1,14 @@
 html.dark {
   background-color: rgb(15, 23, 42);
 }
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

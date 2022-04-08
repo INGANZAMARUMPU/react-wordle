@@ -269,21 +269,20 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex flex-col grow">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
-      <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6">
-          <Grid
-            guesses={guesses}
-            currentGuess={currentGuess}
-            isRevealing={isRevealing}
-            currentRowClassName={currentRowClass}
-          />
-        </div>
+      <div className="px-2 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow pb-2">
+        <Grid
+          guesses={guesses}
+          currentGuess={currentGuess}
+          isRevealing={isRevealing}
+          currentRowClassName={currentRowClass}
+        />
+        <div className="flex grow mt-6"></div>
         <Keyboard
           onChar={onChar}
           onDelete={onDelete}
