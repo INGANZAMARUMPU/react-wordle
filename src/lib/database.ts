@@ -20,6 +20,17 @@ type CompletedGamePayload = {
   won: boolean
 }
 
+const computeScore = () => {
+  const penalty = getStoredPenalty()
+  const { winDistribution, bestStreak } = loadStats()
+  const weighting = [60, 50, 40, 30, 20, 10]
+  const score = weighting.reduce(
+    (r, a, index) => r + a * winDistribution[index],
+    0
+  )
+  return (score - 10 * penalty) * bestStreak
+}
+
 export const saveGameStateToDatabase = (won: boolean) => {
   if (localStorage.getItem('saved')) return
 
@@ -28,11 +39,8 @@ export const saveGameStateToDatabase = (won: boolean) => {
   const endTime = new Date()
   const guesses = (game && game.guesses) || []
   const timeTaken = Math.floor((endTime.getTime() - startTime.getTime()) / 1000)
-  const penalty = getStoredPenalty()
-  const { successRate, totalGames } = loadStats()
-  const advantage = successRate * Math.max(totalGames, 1)
-  const normalScore = advantage - guesses.length * timeTaken - 100 * penalty
-  const score = won ? normalScore : 0
+
+  const score = computeScore()
   localStorage.removeItem('penalty')
   localStorage.setItem('gameScore', score.toString())
 

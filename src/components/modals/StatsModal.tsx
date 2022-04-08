@@ -60,7 +60,7 @@ export const StatsModal = ({
   })
 
   const getRankingStats = useCallback(async () => {
-    if (!gameScore || !country || isGameLost) return
+    if (!gameScore || !country) return
 
     const result = await axios.get(RANKINGS_ENDPOINT, {
       params: { score: gameScore, country, solution },
@@ -68,7 +68,7 @@ export const StatsModal = ({
 
     const data = await result.data
     setRankingStats(data as RankingStats)
-  }, [gameScore, country, isGameLost])
+  }, [gameScore, country])
 
   useEffect(() => {
     if (!isOpen) return
@@ -102,7 +102,7 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
-      {isGameWon && gameScore && (
+      {gameScore && (
         <>
           <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
