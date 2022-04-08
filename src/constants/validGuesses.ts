@@ -1698,6 +1698,7 @@ export const VALID_GUESSES = [
   'nzoze',
   'nzuzi',
   'omoka',
+  'nkuko',
   'onona',
   'oroha',
   'orora',
