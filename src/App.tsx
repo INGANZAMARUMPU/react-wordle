@@ -282,7 +282,7 @@ function App() {
           isRevealing={isRevealing}
           currentRowClassName={currentRowClass}
         />
-        <div className="flex grow"></div>
+        <div className="flex grow mt-6"></div>
         <Keyboard
           onChar={onChar}
           onDelete={onDelete}
