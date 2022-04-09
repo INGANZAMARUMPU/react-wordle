@@ -1798,6 +1798,8 @@ export const VALID_GUESSES = [
   'ryera',
   'ryica',
   'ryiha',
+  'mpeka',
+  'ryoha',
   'ryiwe',
   'ryiza',
   'ryoba',
