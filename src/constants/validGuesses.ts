@@ -2148,6 +2148,7 @@ export const VALID_GUESSES = [
   'urume',
   'ururo',
   'uruta',
+  'njeko',
   'uruti',
   'uruvi',
   'uruvo',
