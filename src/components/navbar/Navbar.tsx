@@ -33,7 +33,7 @@ export const Navbar = ({
           <img src="/ijambo.png" alt="Ijambo" className="h-16" />
         </div>
         <div className="right-icons">
-          {(isGameWon || isGameLost) && (
+          {(isGameWon || isGameLost || true) && (
             <BookOpenIcon
               className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
               onClick={() => setIsMeaningsModalOpen(true)}
