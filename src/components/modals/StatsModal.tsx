@@ -106,9 +106,11 @@ export const StatsModal = ({
           <p className="text-lg font-bold leading-5 text-gray-900 dark:text-gray-100">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
-          <p className="text-xs leading-6 text-gray-900 dark:text-gray-100">
-            Urukino rwamaze: {timeTaken}
-          </p>
+          {timeTaken && (
+            <p className="text-xs leading-6 text-gray-900 dark:text-gray-100">
+              Urukino rwamaze <span className="font-bold">{timeTaken}</span>
+            </p>
+          )}
           <p className="text-m mt-2 leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
           </p>
