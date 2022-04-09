@@ -48,6 +48,7 @@ export const StatsModal = ({
 }: Props) => {
   const gameScore = localStorage.getItem('gameScore')
   const country = localStorage.getItem('country')
+  const timeTaken = localStorage.getItem('timeTaken')
 
   const [rankingStats, setRankingStats] = useState<RankingStats>({
     national_rank: '/',
@@ -104,6 +105,9 @@ export const StatsModal = ({
         <>
           <p className="text-lg font-bold leading-5 text-gray-900 dark:text-gray-100">
             {YOUR_SCORE_TEXT}: {gameScore}
+          </p>
+          <p className="text-xs leading-6 text-gray-900 dark:text-gray-100">
+            Urukino rwamaze: {timeTaken}
           </p>
           <p className="text-m mt-2 leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
