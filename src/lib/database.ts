@@ -3,6 +3,7 @@ import axios from 'axios'
 import {
   COUNTRY_ENDPOINT,
   GAMES_ENDPOINT,
+  MEANINGS_ENDPOINT,
   MISSING_WORDS_ENDPOINT,
 } from '../constants/endpoints'
 import { getStoredPenalty, loadGameStateFromLocalStorage } from './localStorage'
@@ -70,5 +71,15 @@ export const saveCurrentGuessToDatabase = (currentGuess: string) => {
   localStorage.setItem('penalty', penalty.toString())
   axios.post(MISSING_WORDS_ENDPOINT, {
     word: { value: currentGuess.toLowerCase() },
+  })
+}
+
+export const saveMeaningToDatabase = (
+  keyword: string,
+  proverb: string,
+  meaning: string
+) => {
+  axios.post(MEANINGS_ENDPOINT, {
+    meaning: { keyword, proverb, meaning },
   })
 }

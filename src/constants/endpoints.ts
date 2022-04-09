@@ -7,3 +7,4 @@ export const COUNTRY_ENDPOINT = 'https://ipapi.co/json/'
 export const GAMES_ENDPOINT = `${ROOT_URL}/games`
 export const MISSING_WORDS_ENDPOINT = `${ROOT_URL}/missing_words`
 export const RANKINGS_ENDPOINT = `${ROOT_URL}/rankings`
+export const MEANINGS_ENDPOINT = `${ROOT_URL}/meanings`

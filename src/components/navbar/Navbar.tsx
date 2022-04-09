@@ -1,4 +1,5 @@
 import {
+  BookOpenIcon,
   ChartBarIcon,
   CogIcon,
   InformationCircleIcon,
@@ -6,14 +7,20 @@ import {
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
-  setIsStatsModalOpen: (value: boolean) => void
+  setIsMeaningsModalOpen: (value: boolean) => void
   setIsSettingsModalOpen: (value: boolean) => void
+  setIsStatsModalOpen: (value: boolean) => void
+  isGameWon: boolean
+  isGameLost: boolean
 }
 
 export const Navbar = ({
   setIsInfoModalOpen,
-  setIsStatsModalOpen,
+  setIsMeaningsModalOpen,
   setIsSettingsModalOpen,
+  setIsStatsModalOpen,
+  isGameLost,
+  isGameWon,
 }: Props) => {
   return (
     <div className="navbar">
@@ -22,13 +29,16 @@ export const Navbar = ({
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
-        {/* <p className="text-3xl ml-2.5 font-bold dark:text-white">
-          {GAME_TITLE}
-        </p> */}
         <div>
           <img src="/ijambo.png" alt="Ijambo" className="h-16" />
         </div>
         <div className="right-icons">
+          {(isGameWon || isGameLost) && (
+            <BookOpenIcon
+              className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+              onClick={() => setIsMeaningsModalOpen(true)}
+            />
+          )}
           <ChartBarIcon
             className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
             onClick={() => setIsStatsModalOpen(true)}
