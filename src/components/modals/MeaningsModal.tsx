@@ -56,7 +56,7 @@ export const MeaningsModal = ({
           <textarea
             value={meaning}
             onChange={(event) => setMeaning(event.target.value)}
-            rows={10}
+            rows={5}
             className="
         form-control
         block
