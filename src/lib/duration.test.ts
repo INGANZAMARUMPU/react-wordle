@@ -36,5 +36,8 @@ describe('duration', () => {
     expect(secondsToHms(3600 + 60 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)).toBe(
       'isaha 1, umunota 1, amasegonda 8'
     )
+    expect(secondsToHms(721)).toBe('iminota 12, isegonda 1')
+    expect(secondsToHms(456)).toBe('iminota 7, amasegonda 36')
+    expect(secondsToHms(43749)).toBe('amasaha 12, iminota 9, amasegonda 9')
   })
 })
