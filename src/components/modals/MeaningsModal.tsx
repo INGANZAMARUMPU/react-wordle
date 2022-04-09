@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import classNames from 'classnames'
 // import { solution } from '../../lib/words'
 import { BaseModal } from './BaseModal'
@@ -24,8 +24,17 @@ export const MeaningsModal = ({
     "Umwami w'umuriro umusaba akiri umwana, yamara gukura akakwigiza haruguru"
   const disabled = meaning.length === 0
 
+  const containerRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (isOpen && containerRef && containerRef.current) {
+      containerRef.current.focus()
+    }
+  }, [isOpen, containerRef])
+
   return (
     <BaseModal title={MEANINGS_TITLE} isOpen={isOpen} handleClose={handleClose}>
+      <input ref={containerRef} hidden />
       <div>
         <p className="text-sm my-4 text-gray-500 dark:text-gray-300">
           Umugani w'uno munsi urimwo ijambo{' '}
@@ -74,7 +83,7 @@ export const MeaningsModal = ({
           type="button"
           disabled={disabled}
           className={classNames({
-            'mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-sm':
+            'mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white sm:text-sm':
               true,
             'bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500':
               !disabled,
@@ -85,7 +94,6 @@ export const MeaningsModal = ({
             setIsMeaningsModalOpen(false)
             showSuccessAlert('Urakoze ku ntererano yawe !')
           }}
-          // disabled
         >
           {SEND_TEXT}
         </button>
