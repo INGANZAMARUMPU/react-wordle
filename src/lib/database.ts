@@ -7,6 +7,7 @@ import {
 } from '../constants/endpoints'
 import { getStoredPenalty, loadGameStateFromLocalStorage } from './localStorage'
 import { loadStats } from './stats'
+import { secondsToHms } from '../lib/duration'
 
 type CompletedGamePayload = {
   country: string
@@ -43,6 +44,7 @@ export const saveGameStateToDatabase = (won: boolean) => {
   const score = computeScore()
   localStorage.removeItem('penalty')
   localStorage.setItem('gameScore', score.toString())
+  localStorage.setItem('timeTaken', secondsToHms(timeTaken))
 
   const completedGame = {
     end_time: endTime,

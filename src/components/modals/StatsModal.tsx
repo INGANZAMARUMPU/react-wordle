@@ -14,6 +14,7 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
   STATISTICS_TITLE,
+  TIME_TAKEN_TEXT,
   YOUR_SCORE_TEXT,
 } from '../../constants/strings'
 
@@ -48,6 +49,7 @@ export const StatsModal = ({
 }: Props) => {
   const gameScore = localStorage.getItem('gameScore')
   const country = localStorage.getItem('country')
+  const timeTaken = localStorage.getItem('timeTaken')
 
   const [rankingStats, setRankingStats] = useState<RankingStats>({
     national_rank: '/',
@@ -105,6 +107,11 @@ export const StatsModal = ({
           <p className="text-lg font-bold leading-5 text-gray-900 dark:text-gray-100">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
+          {timeTaken && (
+            <p className="text-xs leading-6 text-gray-900 dark:text-gray-100">
+              {TIME_TAKEN_TEXT} <span className="font-bold">{timeTaken}</span>
+            </p>
+          )}
           <p className="text-m mt-2 leading-6 font-medium text-gray-900 dark:text-gray-100">
             {INTERNATIONAL_COMPETITION_TEXT}
           </p>
@@ -114,7 +121,9 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT}</h5>
+            <h5 className="text-sm font-bold leading-5 text-gray-900 dark:text-gray-100">
+              {NEW_WORD_TEXT}
+            </h5>
             <Countdown
               className="text-lg font-medium text-gray-900 dark:text-gray-100"
               date={tomorrow}
