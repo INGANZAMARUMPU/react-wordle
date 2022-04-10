@@ -5,7 +5,6 @@ import {
   InformationCircleIcon,
 } from '@heroicons/react/outline'
 import { proverb } from '../../lib/proverbs'
-import { solution } from '../../lib/words'
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
