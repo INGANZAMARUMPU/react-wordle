@@ -4,6 +4,8 @@ import {
   CogIcon,
   InformationCircleIcon,
 } from '@heroicons/react/outline'
+import { proverb } from '../../lib/proverbs'
+import { solution } from '../../lib/words'
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
@@ -33,7 +35,7 @@ export const Navbar = ({
           <img src="/ijambo.png" alt="Ijambo" className="h-16" />
         </div>
         <div className="right-icons">
-          {(isGameWon || isGameLost || true) && (
+          {(isGameWon || isGameLost) && proverb && (
             <BookOpenIcon
               className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
               onClick={() => setIsMeaningsModalOpen(true)}
