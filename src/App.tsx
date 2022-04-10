@@ -4,6 +4,7 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { MeaningsModal } from './components/modals/MeaningsModal'
 import {
   CORRECT_WORD_MESSAGE,
   GAME_COPIED_MESSAGE,
@@ -56,6 +57,7 @@ function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
+  const [isMeaningsModalOpen, setIsMeaningsModalOpen] = useState(false)
   const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
@@ -273,8 +275,11 @@ function App() {
     <div className="flex flex-col grow">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
-        setIsStatsModalOpen={setIsStatsModalOpen}
+        setIsMeaningsModalOpen={setIsMeaningsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
+        setIsStatsModalOpen={setIsStatsModalOpen}
+        isGameWon={isGameWon}
+        isGameLost={isGameLost}
       />
       <div className="px-2 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow pb-2">
         <Grid
@@ -296,27 +301,33 @@ function App() {
           handleClose={() => setIsInfoModalOpen(false)}
         />
         <StatsModal
-          isOpen={isStatsModalOpen}
-          handleClose={() => setIsStatsModalOpen(false)}
-          guesses={guesses}
           gameStats={stats}
+          guesses={guesses}
+          handleClose={() => setIsStatsModalOpen(false)}
+          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+          isDarkMode={isDarkMode}
           isGameLost={isGameLost}
           isGameWon={isGameWon}
-          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
           isHardMode={isHardMode}
-          isDarkMode={isDarkMode}
           isHighContrastMode={isHighContrastMode}
+          isOpen={isStatsModalOpen}
           numberOfGuessesMade={guesses.length}
         />
         <SettingsModal
-          isOpen={isSettingsModalOpen}
           handleClose={() => setIsSettingsModalOpen(false)}
-          isHardMode={isHardMode}
-          handleHardMode={handleHardMode}
-          isDarkMode={isDarkMode}
           handleDarkMode={handleDarkMode}
-          isHighContrastMode={isHighContrastMode}
+          handleHardMode={handleHardMode}
           handleHighContrastMode={handleHighContrastMode}
+          isDarkMode={isDarkMode}
+          isHardMode={isHardMode}
+          isHighContrastMode={isHighContrastMode}
+          isOpen={isSettingsModalOpen}
+        />
+        <MeaningsModal
+          handleClose={() => setIsMeaningsModalOpen(false)}
+          isOpen={isMeaningsModalOpen}
+          setIsMeaningsModalOpen={setIsMeaningsModalOpen}
+          showSuccessAlert={showSuccessAlert}
         />
         <AlertContainer />
       </div>
