@@ -20,8 +20,6 @@ export const MeaningsModal = ({
   showSuccessAlert,
 }: Props) => {
   const [meaning, setMeaning] = useState('')
-  // const solution = 'rimwe'
-  // const proverb = PROVERBS[solution as ProverbKey][0]
   const disabled = meaning.length === 0
 
   return (
