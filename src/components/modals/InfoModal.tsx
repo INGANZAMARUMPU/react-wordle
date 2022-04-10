@@ -88,7 +88,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <p className="mt-6 italic text-xs text-gray-500 dark:text-gray-300">
         Muri runo rukino, harimwo amajambo{' '}
-        <span className="font-bold">{WORDS.concat(VALID_GUESSES).length}</span>{' '}
+        <span className="font-bold">
+          {new Set(WORDS.concat(VALID_GUESSES)).size}
+        </span>{' '}
         gusa.
       </p>
 

@@ -77,6 +77,7 @@ function App() {
       localStorage.removeItem('saved')
       localStorage.setItem('startTime', new Date().toISOString())
       localStorage.removeItem('gameScore')
+      localStorage.removeItem('timeTaken')
       return []
     }
     const gameWasWon = loaded.guesses.includes(solution)
