@@ -892,7 +892,6 @@ export const VALID_GUESSES = [
   'ikazi',
   'ikeba',
   'ikete',
-  'ikiba ',
   'ikibi',
   'ikica',
   'ikida',
