@@ -20,7 +20,7 @@ export const WORDS = [
   'icupa',
   'umuco',
   'rimwe',
-  'ndaje',
+  'jisho',
   'uruvo',
   'kwiga',
   'kumwa',
