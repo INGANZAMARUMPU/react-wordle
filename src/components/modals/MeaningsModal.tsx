@@ -4,7 +4,7 @@ import { solution } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import { SEND_TEXT, MEANINGS_TITLE } from '../../constants/strings'
 import { saveMeaningToDatabase } from '../../lib/database'
-import { proverb } from '../../lib/proverbs'
+import { proverb, meanings } from '../../lib/proverbs'
 
 type Props = {
   isOpen: boolean
@@ -12,6 +12,31 @@ type Props = {
   setIsMeaningsModalOpen: (isMeaningsModalOpen: boolean) => void
   showSuccessAlert: (message: string) => void
 }
+
+const Meaning = ({ meaning }: { meaning: string }) => (
+  <div className="flex justify-between gap-4 py-3">
+    <div className="text-gray-500 dark:text-gray-300 mt-2 text-left">
+      <p className="text-xs text-gray-500 dark:text-gray-300">{meaning}</p>
+    </div>
+  </div>
+)
+
+const Meanings = ({ meanings }: { meanings: string[] }) => (
+  <>
+    <div className="mt-8">
+      <p className="text-m leading-6 font-medium text-gray-900 dark:text-gray-100">
+        Insiguro zimaze gutangwa
+      </p>
+    </div>
+    <div className="flex flex-col divide-y">
+      {meanings.map((meaning, index) => (
+        <div key={index}>
+          <Meaning meaning={meaning} />
+        </div>
+      ))}
+    </div>
+  </>
+)
 
 export const MeaningsModal = ({
   isOpen,
@@ -88,6 +113,7 @@ export const MeaningsModal = ({
           {SEND_TEXT}
         </button>
       </div>
+      {meanings.length > 0 && <Meanings meanings={meanings} />}
     </BaseModal>
   )
 }
