@@ -16,7 +16,14 @@ type Props = {
 const Meaning = ({ meaning }: { meaning: string }) => (
   <div className="flex justify-between gap-4 py-3">
     <div className="text-gray-500 dark:text-gray-300 mt-2 text-left">
-      <p className="text-xs text-gray-500 dark:text-gray-300">{meaning}</p>
+      <p className="text-xs text-gray-500 dark:text-gray-300 whitespace-normal">
+        {meaning.split('\n').map((line, i) => (
+          <span key={i}>
+            {line}
+            <br />
+          </span>
+        ))}
+      </p>
     </div>
   </div>
 )
