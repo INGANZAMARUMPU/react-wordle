@@ -2,6 +2,7 @@ export type MeaningKey = keyof typeof MEANINGS
 
 export const MEANINGS = {
   'Amajambo menshi mabi arutwa na rimwe ryiza': [
+    'Ushobora gusanga uriko uvuga ibindi bintu bitari bikenewe bigatuma bihindura canke vyonona ivyambere',
     "Uwo mugani ushaka kutwumvisha ko ijambo ryiza rishobora kuba inkoramutima kurusha menshi atagira akamaro kuko rishobora kuzirikanywa neza kurusha menshi y'impfagusa kandi ko kuvuga vyinshi atariko kuvuga vyiza.",
     'Hakuvuga menshi ataco amaze wovuga rimwe rifasha umuntu.',
     'Imbere yuko ugira ico uvuze umuntu yobanza kwiyumvira hakuvuga vyinshi atakimazi kirimwo.\n Gushishoza imbere yukuvuga bigira ico vyungura.',
