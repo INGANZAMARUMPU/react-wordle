@@ -11,7 +11,7 @@ export const WIN_MESSAGES = [
 export const GAME_COPIED_MESSAGE = 'Urukino rwakoporowe'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Indome ntizikwiye'
 export const WORD_NOT_FOUND_MESSAGE =
-  'Iryo jambo ntiririmwo. Urakuwe amanota 10. Gerageza irindi.'
+  '🙅🏾‍♂️ 🙅🏾‍♀️ Iryo jambo ntiririmwo. Urakuwe amanota 10. Gerageza irindi.'
 export const HARD_MODE_ALERT_MESSAGE =
   'Urukino rugoye ushobora kurujamwo ariho ugitangura gukina gusa!'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
