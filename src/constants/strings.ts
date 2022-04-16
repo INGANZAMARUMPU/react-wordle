@@ -1,12 +1,12 @@
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 
 export const WIN_MESSAGES = [
-  'Ikibazo uragitoye 👍🏾 !',
-  "Ubitoye nk'uwadubuye 👍🏾 !",
-  'Neza cane 👍🏾 !',
-  'Uri incambwenge 👍🏾 !',
-  'Urarigemye 👍🏾 !',
-  "Ukwiye umudari w'inzahabu 👍🏾 !",
+  '✅ Ikibazo uragitoye 👍🏾!',
+  "🔥 Ubitoye nk'uwadubuye 👍🏾 !",
+  '💯 Neza cane 👍🏾 !',
+  '🤩 Uri incambwenge kweri 👍🏾 !',
+  '🎉 Urarigemye 👍🏾 !',
+  "🥇 Ukwiye umudari w'inzahabu 👍🏾!",
 ]
 export const GAME_COPIED_MESSAGE = 'Urukino rwakoporowe'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Indome ntizikwiye'
