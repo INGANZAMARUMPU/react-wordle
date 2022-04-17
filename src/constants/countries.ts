@@ -42,7 +42,7 @@ export const COUNTRIES = {
   Senegal: 'Senegal',
   Singapore: 'Singapore',
   'South Africa': 'South Africa',
-  'South Korea': 'South Korea',
+  'South Korea': 'Koreya yo hepfo',
   Spain: 'Spain',
   Sudan: 'Sudan',
   Sweden: 'Sweden',
