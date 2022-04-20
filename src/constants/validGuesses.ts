@@ -2946,4 +2946,5 @@ export const VALID_GUESSES = [
   'yirye',
   'zibwe',
   'zopfa',
+  'amohe',
 ]
