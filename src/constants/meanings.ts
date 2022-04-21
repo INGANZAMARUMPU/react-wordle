@@ -15,6 +15,10 @@ export const MEANINGS = {
     'Bashatse kuvuga yuko naho womara umwanya uvuga nabi muga ugaca uvuga neza bishobora guhindura ivyo wavuze vyose bikabonwa neza.',
   ],
   "Agasozi k'intahanurwa gasha abagabo babona": [
+    'Iyo wanse guhanugwa hakiri kare bikakugiririra ingaruka mbi ni bake bakugarukirako kuko uba warahanuwe ukanka hakiri kare',
+    'Intahanurwa ibwirwa nuko amaso atukuye',
+    'Usa nuwundi mugani uvugango: "intabwirwa ibwirwa nuko amaso atukuye"',
+    'Iyo uhanuwe ntiwumvirize, ntanumwe aza kugutabara igihe bigenze nabi.',
     'Uwanka kwumva impanuro  yumva yiboneyeko ',
     'Iyo wahanuwe ukanana, amaherezo ibibazo biragushikira bamwe baguhanura ukanka birabira',
     "Umuntu bahanura ntiyumve iyo agize ingorane zijanye n'ivyo bamuhanuyeko ntawumufasha bose bamuraba birenganira",
