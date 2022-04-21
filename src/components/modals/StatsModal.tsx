@@ -148,6 +148,23 @@ export const StatsModal = ({
           </button>
         </div>
       )}
+      <div className="flex justify-between gap-4 py-3">
+        <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">
+          <div>
+            <p className="text-m mt-2 leading-6 font-medium text-gray-900 dark:text-gray-100">
+              Abadushigikira
+            </p>
+            <div className="flex">
+              <a
+                href="https://www.ecobank.com/bi/personal-banking/countries"
+                className="focus:outline-none pr-1"
+              >
+                <img src="/ecobank.jpeg" alt="Ijambo" className="h-12" />
+              </a>
+            </div>
+          </div>
+        </p>
+      </div>
     </BaseModal>
   )
 }
