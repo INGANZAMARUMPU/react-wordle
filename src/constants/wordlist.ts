@@ -36,7 +36,7 @@ export const WORDS = [
   'ryera',
   'nyene',
   'agatu',
-  'mpene',
+  'mwene',
   'karya',
   'amase',
   'urugi',
