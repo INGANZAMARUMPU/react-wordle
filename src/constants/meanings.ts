@@ -14,4 +14,14 @@ export const MEANINGS = {
     'Nivyiza kuvuga make.',
     'Bashatse kuvuga yuko naho womara umwanya uvuga nabi muga ugaca uvuga neza bishobora guhindura ivyo wavuze vyose bikabonwa neza.',
   ],
+  "Agasozi k'intahanurwa gasha abagabo babona": [
+    'Uwanka kwumva impanuro  yumva yiboneyeko ',
+    'Iyo wahanuwe ukanana, amaherezo ibibazo biragushikira bamwe baguhanura ukanka birabira',
+    "Umuntu bahanura ntiyumve iyo agize ingorane zijanye n'ivyo bamuhanuyeko ntawumufasha bose bamuraba birenganira",
+    'Abantu badahanurwa bisanga mubibakomerera bitakikosorwa',
+    'Ni kuvuga uwuhanuwe ntiyumve aguye mu rudubi baramuraba ataco bamufasha',
+    'Iyo umuntu adahanurwa bakamuhanura ntiyumve arabona ingaruka zo kudahanurwa mu buzima bwiwe',
+    'Iyo umuntu yanse kwumvira impanuro agira ibibazo abandi birorerera',
+    "Ico ntahura nuko iyo wahanuwe kenshi ukanka iyo ushikiwe nivyago barakureka kuko waranse guhanurwa uyo mugani usa nuwundi uvuga kw'intabarirwa ibwirwa nuko amaso atukuye canke ngo ugutwi kw'impene kwumva kwokeje n'uyundi uvuga ngo wanka kugarura inka ikirihafi yarengana imirambi ukabira nkayo. Murakoze",
+  ],
 }
