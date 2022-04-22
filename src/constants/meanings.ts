@@ -60,4 +60,7 @@ export const MEANINGS = {
   "Urya nk'inka ugapfa nk'imbwa": [
     'Urya nabi ivyo warondeye ugapfa ataco ugifise ataco ugishobora kwimarira wari gushobora kubaho neza iyubika neza ugakoresha neza ',
   ],
+  "Umuti w'imbwa wahwa ku rugo": [
+    'Ni kuvuga urugo rwuzuye ibiti. Bashobora gukubitisha iyo mbwa.',
+  ],
 }
