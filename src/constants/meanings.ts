@@ -63,4 +63,13 @@ export const MEANINGS = {
   "Umuti w'imbwa wahwa ku rugo": [
     'Ni kuvuga urugo rwuzuye ibiti. Bashobora gukubitisha iyo mbwa.',
   ],
+  'Akanyoni katagurutse ntikamenya iyo bweze': [
+    'Uwudatembereye ntamenya aho isi canke ubuzima bugeze',
+    'Iyo ugumye wigunze ntumenye intambwe abandi bagezeko ngo nawe wishire kurugezo',
+    "Uwudatembereye ntamenya iyo ibintu bigeze vy'iterambere",
+    'Iyo umuntu adatembereye atamenya ibibera ahandi ukwo vyifashe',
+    'Iyo udahagurutse ngo ugende ntushobora kumenya amakuru',
+    'Ko bisaba gutembera ahandi kugira umenye ibintu bitandukanye',
+    'Ama opportunités ntazogusanga muhira udasohotse uyarondere',
+  ],
 }
